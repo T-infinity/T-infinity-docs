@@ -1,1 +1,1 @@
-#H1 T-infinity: multi-solver framework for CFD.
+# T-infinity: multi-solver framework for CFD.
