@@ -10,7 +10,6 @@ T-infinity
 
 .. toctree::
    :maxdepth: 2
-   :caption: Jump In:
    
    mesh
    field
