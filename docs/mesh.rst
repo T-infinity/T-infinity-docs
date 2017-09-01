@@ -1,6 +1,6 @@
 MeshInterface
 ===============================
-The ``MeshInterface`` describes read-only access to an unstructured grid.
+The heart of :math:`T^{\infty}` is the ``MeshInterface`` that describes read-only access to an unstructured grid.
 Only two mesh entities are described: nodes and cells.  
 Additional entities (edges, faces, etc) must be derrived from cells and nodes.
 
