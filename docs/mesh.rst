@@ -37,12 +37,10 @@ valid across multiple domains.
 
 Conventions
 -----------
-Cells are accessed by calling ``void MeshInterface::cell(int cell_id, int* cell_ptr)``.
-The local node Ids for cell ``cell_id`` are written into the ``cell_ptr`` using the CGNS convention for node ordering.
+Cells are accessed by calling ``void MeshInterface::cell(int cell_id, int* cell_ptr)``, the same call is used for both volume and surface cells.
+This call writes the local node Ids for the cell into the passed pointer using the CGNS convention for node ordering.
 (See https://cgns.github.io/CGNS_docs_current/sids/conv.html).
-It is the caller's responsibility to ensure there is sufficient memory to fit all the nodes in cell ``cell_id``.
-``CellType MeshInterface::cellType(int cell_id)`` returns an enum for the cell type of cell ``cell_id``.
-``int MeshInterface::cellTypeLength(CellType type)`` will return the number of nodes for any ``CellType``.
+It is the caller's responsibility to ensure there is sufficient memory to fit all the nodes in the requested cell.
+The length of a cell is determined calling ``CellType MeshInterface::cellType(int cell_id)`` to get the cell's type.  
+Then calling ``int MeshInterface::cellTypeLength(CellType type)`` to get the length of that type.
 At this time only fixed width cell types are supported (``NGON`` and ``NFACE`` are not supported).
-The same ``void MeshInterface::cell(int cell_id, int* cell_ptr)`` call is used for 3D (volume) and 2D (surface cells).
-
