@@ -1,7 +1,11 @@
-T-infinity: multi-solver framework for CFD.
-===========================================
 
-Purpose
--------
+Welcome to T-infinity's documentation!
+======================================
 
-T-infinity is a common set of API calls for complex physics based simulations.
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+   
+   mesh
+
+
