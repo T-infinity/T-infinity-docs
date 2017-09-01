@@ -1,4 +1,4 @@
-.. image:: _static images overset.png
+.. image:: _static/images/overset.png
    :width: 500px
    :align: center
    :alt: Overset
