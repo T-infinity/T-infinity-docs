@@ -1,6 +1,8 @@
 MeshInterface
 ===============================
 The heart of :math:`T^{\infty}` is the ``MeshInterface`` that describes read-only access to an unstructured grid.
+``MeshInterface`` objects are the primary output of the pre-processing step but are used nearly all :math:`T^{\infty}` plugins.
+
 Only two mesh entities are described: nodes and cells.  
 Additional entities (edges, faces, etc) must be derrived from cells and nodes.
 
