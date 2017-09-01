@@ -16,3 +16,9 @@ This simplifies development of plug-ins and allows the use of an arbitrary numbe
 
 Domain couplers are plug-ins that operate across multiple domains.  
 The only currently existing example of a domain coupler is the overset assembler.
+
+
+.. image:: _static/images/cartoon-domains.png
+   :width: 200px
+   :align: left
+   :alt: multiple domains
