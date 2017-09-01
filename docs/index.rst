@@ -14,5 +14,8 @@ T-infinity
    mesh
    field
    pre-processor
+   mesh-adaptation
+   fluid-solver
+   visualization
 
 
