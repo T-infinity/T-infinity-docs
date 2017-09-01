@@ -16,6 +16,7 @@ T-infinity
    pre-processor
    mesh-adaptation
    mesh-deformation
+   overset-domain-assembly
    fluid-solver
    visualization
 
