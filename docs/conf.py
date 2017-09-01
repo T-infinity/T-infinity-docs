@@ -150,5 +150,6 @@ else:
 # Add custom RTD extension
 if 'extensions' in globals():
     extensions.append("readthedocs_ext.readthedocs")
+    extensions.append("sphinx.ext.jsmath");
 else:
-    extensions = ["readthedocs_ext.readthedocs"]
+    extensions = ["readthedocs_ext.readthedocs", "sphinx.ext.jsmath"]
