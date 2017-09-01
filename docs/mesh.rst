@@ -1,4 +1,4 @@
-:math:`T^{\infty}`MeshInterface
+MeshInterface
 ===============================
 The ``MeshInterface`` describes read-only access to an unstructured grid.
 Only two mesh entities are described: nodes and cells.  
@@ -37,5 +37,12 @@ valid across multiple domains.
 
 Conventions
 -----------
-All elements are described using the CGNS conventions for node orderings.  (See https://cgns.github.io/CGNS_docs_current/sids/conv.html).
+Cells are accessed by calling ``void MeshInterface::cell(int cell_id, int* cell_ptr)``.
+The local node Ids for cell ``cell_id`` are written into the ``cell_ptr`` using the CGNS convention for node ordering.
+(See https://cgns.github.io/CGNS_docs_current/sids/conv.html).
+It is the caller's responsibility to ensure there is sufficient memory to fit all the nodes in cell ``cell_id``.
+``CellType MeshInterface::cellType(int cell_id)`` returns an enum for the cell type of cell ``cell_id``.
+``int MeshInterface::cellTypeLength(CellType type)`` will return the number of nodes for any ``CellType``.
+At this time only fixed width cell types are supported (``NGON`` and ``NFACE`` are not supported).
+The same ``void MeshInterface::cell(int cell_id, int* cell_ptr)`` call is used for 3D (volume) and 2D (surface cells).
 
