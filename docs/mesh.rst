@@ -31,8 +31,8 @@ However, global Ids on a single partition will almost always be sparse.
 Mesh Domains
 ~~~~~~~~~~~~
 :math:`T^{\infty}` supports multiple simultaneous mesh domains.  Multiple domains are required for overset simulations.
-Each mesh domain can be partitioned.  Global Ids are only valid within a single domain.  There is no entity identifier
-valid across multiple domains.
+Each domain is partitioned across all the ranks of a specific MPI communicator. Global Ids are only valid within a single domain.  
+There is no entity identifier valid across multiple domains.
 
 
 Conventions
@@ -44,3 +44,4 @@ It is the caller's responsibility to ensure there is sufficient memory to fit al
 The length of a cell is determined calling ``CellType MeshInterface::cellType(int cell_id)`` to get the cell's type.  
 Then calling ``int MeshInterface::cellTypeLength(CellType type)`` to get the length of that type.
 At this time only fixed width cell types are supported (``NGON`` and ``NFACE`` are not supported).
+
