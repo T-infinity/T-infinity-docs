@@ -11,6 +11,7 @@ T-infinity
 .. toctree::
    :maxdepth: 2
    
+   domain
    mesh
    field
    pre-processor
