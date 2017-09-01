@@ -1,6 +1,13 @@
+T-infinity
+==========
+:math:`T^{\infty}` is an extensible framework for multiphysics applications.
 
-Welcome to T-infinity's documentation!
-======================================
+.. image:: t-inf-blue-ring.jpg
+   :width: 200px
+   :align: center
+   :height: 100px
+   :alt: alternate text
+
 
 .. toctree::
    :maxdepth: 2
