@@ -16,9 +16,6 @@ Node and Cell Ids
 ~~~~~~~~~~~~~~~~~
 
 Each node has a local node identifier (Id) and a global node Id.  Likewise, each cell has a local cell Id and a global cell Id.
-Local Ids are represented using a 32 bit integer, global ids are represented using a 64 bit integer. 
-Complex simulations may require more than 2.2 billion total mesh entities; however it is considered unlikely that any one partition will have over 2.2 billion resident entities.
-
 Local Ids cannot be sparse.
 Local Ids begin at ``0`` and end ``total number of local entities - 1``. 
 Local Ids are only used by the local partition, no other partition should know a local Id for any entity.
@@ -27,6 +24,10 @@ This allows a local partition to reorder entities (for cache efficiency, bandwid
 Unlike local Ids, the global Id of an entity is unique across all partitions that entity is *resident*.
 The set of global Ids across all partitions cannot be sparse, they must begin at ``0`` and end at ``total number of entities - 1``. 
 However, global Ids on a single partition will almost always be sparse.
+
+.. note::
+   Local Ids are represented using a 32 bit integer, global ids are represented using a 64 bit integer. 
+   Complex simulations may require more than 2.2 billion total mesh entities; however it is considered unlikely that any one partition will have over 2.2 billion resident entities.
 
 Mesh Domains
 ~~~~~~~~~~~~
