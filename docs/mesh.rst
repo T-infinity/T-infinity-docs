@@ -48,5 +48,5 @@ The length of a cell is determined calling ``CellType MeshInterface::cellType(in
 Then calling ``int MeshInterface::cellTypeLength(CellType type)`` to get the length of that type.
 At this time only fixed width cell types are supported (``NGON`` and ``NFACE`` are not supported).
 
-Surface cells are listed using the same ``cell(int cell_id, int* cell_ptr)`` calls.  :math:`T^{}\infty}` does not differentiate between surface and volume elements in the cell accessors.
+Surface cells are listed using the same ``cell(int cell_id, int* cell_ptr)`` calls.  :math:`T^{\infty}` does not differentiate between surface and volume elements in the cell accessors.
 Surface cells must be oriented so that the unit vector from a right handed walk of the vertices produces a unit normal pointing out of the neighboring volume element. 
