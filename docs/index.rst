@@ -1,5 +1,5 @@
 .. image:: _static/images/t-inf-logo-black.png
-   :width: 500px
+   :width: 128px
    :align: center
    :alt: T-infinity logo
 T-infinity
