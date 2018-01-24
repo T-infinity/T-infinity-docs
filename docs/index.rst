@@ -1,3 +1,7 @@
+.. image:: _static/images/t-inf-logo.png
+   :width: 500px
+   :align: center
+   :alt: T-infinity logo
 T-infinity
 ==========
 :math:`T^{\infty}` is an extensible framework for multiphysics applications.
