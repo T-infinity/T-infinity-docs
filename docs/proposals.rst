@@ -1,5 +1,8 @@
-Fluid Boundary Conditions (Proposal)
-==============
+Proposed Extensions
+===================
+
+Fluid Boundary Conditions
+-------------------------
 
 
 T-infinity defines the following boundary conditions:

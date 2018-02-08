@@ -25,4 +25,4 @@ T-infinity
    fluid-solver
    visualization
    contact
-   bc
+   proposals
