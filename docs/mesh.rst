@@ -4,7 +4,7 @@ The heart of :math:`T^{\infty}` is the ``MeshInterface`` that describes read-onl
 ``MeshInterface`` objects are the primary output of the pre-processing step but are used nearly all :math:`T^{\infty}` plugins.
 
 Only two mesh entities are described: nodes and cells.
-Additional entities (edges, faces, etc) must be derrived from cells and nodes.
+Additional entities (edges, faces, etc) must be derived from cells and nodes.
 
 Partitioning
 ------------
@@ -29,7 +29,7 @@ However, global Ids on a single partition will almost always be sparse.
 
 .. note::
    Local Ids are represented using a 32 bit integer, global ids are represented using a 64 bit integer.
-   Complex simulations may require more than 2.2 billion total mesh entities; however it is considered unlikely that any one partition will have over 2.2 billion resident entities.
+   Complex simulations may require more than 2.2 billion total mesh entities; however, it is considered unlikely that any one partition will have over 2.2 billion resident entities.
 
 Mesh Domains
 ~~~~~~~~~~~~
@@ -41,7 +41,7 @@ There is no entity identifier valid across multiple domains.
 Conventions
 -----------
 Cells are accessed by calling ``void MeshInterface::cell(int cell_id, int* cell_ptr)``, the same call is used for both volume and surface cells.
-This call writes the local node Ids for the cell into the passed pointer using the CGNS convention for node ordering.
+This call writes the local node Ids for the cell into the passed pointer by using the CGNS convention for node ordering.
 (See https://cgns.github.io/CGNS_docs_current/sids/conv.html).
 It is the caller's responsibility to ensure there is sufficient memory to fit all the nodes in the requested cell.
 The length of a cell is determined calling ``CellType MeshInterface::cellType(int cell_id)`` to get the cell's type.
