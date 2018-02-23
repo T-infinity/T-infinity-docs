@@ -7,8 +7,10 @@ Fluid Boundary Conditions
 
 T-infinity defines the following boundary conditions:
     - Farfield
-    - Constant Temperature No-Slip
-    - Adiabatic No-Slip
+    - No-Slip Wall:
+      - Constant Temperature
+      - Specified Temperature T(x,y,z)
+      - Adiabatic
     - Tangent Slip
     - Cartesian Plane Symmetry (x, y, z)
     - Arbitrary Plane Symmetry
