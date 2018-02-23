@@ -1,3 +1,9 @@
+.. _mesh_adaptation:
+
+.. image:: _static/images/adaptation-onera.png
+   :width: 500px
+   :align: center
+   :alt: Overset
 MeshAdaptation
 ==============
 A ``MeshAdaptation`` plugin takes a ``Mesh``, a Riemannian Metric Tensor ``Field``, and a json formatted string of options.  
