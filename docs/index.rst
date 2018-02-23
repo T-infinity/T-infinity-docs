@@ -24,5 +24,6 @@ T-infinity
    overset-domain-assembly
    fluid-solver
    visualization
+   examples
    contact
    proposals
