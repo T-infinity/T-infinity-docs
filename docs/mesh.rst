@@ -1,3 +1,4 @@
+..  _mesh:
 MeshInterface
 ===============================
 The heart of :math:`T^{\infty}` is the ``MeshInterface`` that describes read-only access to an unstructured grid.
