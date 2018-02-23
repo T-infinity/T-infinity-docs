@@ -1,6 +1,6 @@
 .. _mesh_deformation:
 
-.. image:: _static/images/fsi.png
+.. image:: _static/images/fsi.gif
    :width: 500px
    :align: center
    :alt: Fsi
