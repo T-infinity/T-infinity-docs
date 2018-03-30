@@ -20,9 +20,12 @@ T-infinity
    field
    pre-processor
    mesh-adaptation
+   metric-field-calculator
    mesh-deformation
    overset-domain-assembly
    fluid-solver
+   structural-solver
+   transfer-scheme
    visualization
    examples
    contact

@@ -17,6 +17,7 @@ Initialization must include allocating the solution stored within the solver.
 After initialization, the solver must be prepared to accept new solution states at either nodes (for node based solvers) or cells (for cell based solvers).
 The framework may choose to overwrite the solver's initial flow state using the ``set`` methods.  
 Some reasons why the framework may choose to overwrite the flow state include:
+
   -to initialize the flow from previously saved state snapshots (snap files)
   -to initialize the flow by seeding the initial field from interpolations from a coarse grid
   -to initialize the flow to help aid in stability during the first few solution iterations
