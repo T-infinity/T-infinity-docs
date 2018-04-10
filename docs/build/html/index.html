@@ -25,23 +25,17 @@
   
 
   
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="T-infinity latest documentation" href="#"/>
-        <link rel="next" title="Domain" href="domain.html"/> 
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Domain" href="domain.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -94,10 +88,16 @@
 <li class="toctree-l1"><a class="reference internal" href="field.html">FieldInterface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pre-processor.html">PreProcessor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesh-adaptation.html">MeshAdaptation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metric-field-calculator.html">Metric Field Calculator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesh-deformation.html">Mesh Deformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="overset-domain-assembly.html">Overset Assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overset-domain-assembly.html">Overset Assembler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fluid-solver.html">FluidSolver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structural-solver.html">Structural Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transfer-scheme.html">Transfer Scheme</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposals.html">Proposed Extensions</a></li>
 </ul>
 
             
@@ -109,7 +109,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="#">T-infinity</a>
@@ -117,9 +117,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -149,7 +150,7 @@
         
             
             
-              <a href="https://github.com/matthewOConnell/T-infinity/blob/master/docs/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/matthewOConnell/T-infinity//master/docs/index.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -163,10 +164,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="t-infinity">
+  <a class="reference internal image-reference" href="_images/t-inf-logo-black.png"><img alt="T-infinity logo" class="align-center" src="_images/t-inf-logo-black.png" style="width: 128px;" /></a>
+<div class="section" id="t-infinity">
 <h1>T-infinity<a class="headerlink" href="#t-infinity" title="Permalink to this headline">¶</a></h1>
-<p><span class="math">T^{\infty}</span> is an extensible framework for multiphysics applications.</p>
-<a class="reference internal image-reference" href="_staticimagest-inf-blue-ring.png"><img alt="T-infinity overview" class="align-center" src="_staticimagest-inf-blue-ring.png" style="width: 500px;" /></a>
+<p><img class="math" src="_images/math/21c9d2effdd451b32847f0f700d6b89879676736.png" alt="T^{\infty}"/> is an extensible framework for multiphysics applications.</p>
+<a class="reference internal image-reference" href="_images/t-inf-blue-ring.png"><img alt="T-infinity overview" class="align-center" src="_images/t-inf-blue-ring.png" style="width: 500px;" /></a>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="domain.html">Domain</a></li>
@@ -178,19 +180,34 @@
 <li class="toctree-l1"><a class="reference internal" href="field.html">FieldInterface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pre-processor.html">PreProcessor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesh-adaptation.html">MeshAdaptation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metric-field-calculator.html">Metric Field Calculator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesh-deformation.html">Mesh Deformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="overset-domain-assembly.html">Overset Assembly</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fluid-solver.html">FluidSolver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overset-domain-assembly.html">Overset Assembler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fluid-solver.html">FluidSolver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fluid-solver.html#initialization">Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluid-solver.html#get-and-set-state"><code class="docutils literal notranslate"><span class="pre">get</span></code> and <code class="docutils literal notranslate"><span class="pre">set</span></code> state</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluid-solver.html#solve">Solve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluid-solver.html#post-processing">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluid-solver.html#updating-mesh-node-locations">Updating Mesh node locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluid-solver.html#a-note-on-internal-state">A note on internal state</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="structural-solver.html">Structural Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transfer-scheme.html">Transfer Scheme</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposals.html">Proposed Extensions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="proposals.html#fluid-boundary-conditions">Fluid Boundary Conditions</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -215,7 +232,7 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -273,6 +290,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'latest',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -290,14 +308,13 @@
   
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

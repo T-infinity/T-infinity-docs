@@ -1,8 +1,5 @@
 FieldInterface
 ==============
-
-If ``MeshInterface`` is the heart of :math:`T^{\infty}`, ``FieldInterface`` is the lungs.
-
 A field is data defined across a mesh domain. 
 Fields consist of entries (scalar, vector, or tensor data) defined at either the cells or nodes of a mesh.
 An entry can be integers (either 32 bit or 64 bit) or floating point values (either single or double precision).

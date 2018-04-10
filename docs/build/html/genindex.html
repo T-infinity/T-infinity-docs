@@ -26,22 +26,16 @@
   
 
   
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="#"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="T-infinity latest documentation" href="index.html"/> 
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -94,10 +88,16 @@
 <li class="toctree-l1"><a class="reference internal" href="field.html">FieldInterface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pre-processor.html">PreProcessor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesh-adaptation.html">MeshAdaptation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metric-field-calculator.html">Metric Field Calculator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesh-deformation.html">Mesh Deformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="overset-domain-assembly.html">Overset Assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overset-domain-assembly.html">Overset Assembler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fluid-solver.html">FluidSolver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structural-solver.html">Structural Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transfer-scheme.html">Transfer Scheme</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proposals.html">Proposed Extensions</a></li>
 </ul>
 
             
@@ -109,7 +109,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">T-infinity</a>
@@ -117,9 +117,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -149,7 +150,7 @@
         
             
             
-              <a href="https://github.com/matthewOConnell/T-infinity/blob/master/docs/genindex.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/matthewOConnell/T-infinity//master/docs/genindex.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -172,9 +173,7 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -192,7 +191,7 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -250,6 +249,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'latest',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -267,14 +267,13 @@
   
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
