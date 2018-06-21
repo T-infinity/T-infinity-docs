@@ -1,5 +1,5 @@
 .. image:: _static/images/t-inf-logo-black.png
-   :width: 32px
+   :width: 64px
    :align: center
    :alt: T-infinity logo
 
@@ -15,8 +15,7 @@ Installation
 
 Install T-infinity using the install.sh script. 
 
-::
-  ./install.sh --help 
+``./install.sh --help``
 
 
 Example Usage:
