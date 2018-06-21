@@ -15,41 +15,19 @@ Installation
 
 Install T-infinity using the install.sh script. 
 
-```
-./install.sh --help 
-```
+::
+  ./install.sh --help 
 
 
 Example Usage:
-```
-./install.sh --install-path=~/Desktop/ \
-             --mpi-path=/usr/local/mpich/ \
-             --c++-compiler=/usr/local/bin/g++ \
-             --c-compiler=/usr/local/bin/gcc \
-             --fortran-compiler=/usr/local/bin/gfortran \
-```
+::
+  ./install.sh --install-path=~/Desktop/ \
+               --mpi-path=/usr/local/mpich/ \
+               --c++-compiler=/usr/local/bin/g++ \
+               --c-compiler=/usr/local/bin/gcc \
+               --fortran-compiler=/usr/local/bin/gfortran
 
 The c, c++, and fortran compiler paths should point to the compiler executables.
 The mpi-path should be a folder that contains the `include` and `lib` folder for your mpi installation.
 
 
-.. toctree::
-   :maxdepth: 2
-
-   domain
-   mesh
-   field
-   pre-processor
-   mesh-adaptation
-   metric-field-calculator
-   mesh-deformation
-   overset-domain-assembly
-   fluid-solver
-   structural-solver
-   transfer-scheme
-   visualization
-   examples
-   FAQ
-   contact
-   proposals
-   about
