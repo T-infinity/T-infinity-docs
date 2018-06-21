@@ -30,4 +30,23 @@ Example Usage:
 The c, c++, and fortran compiler paths should point to the compiler executables.
 The mpi-path should be a folder that contains the `include` and `lib` folder for your mpi installation.
 
+.. toctree::
+   :maxdepth: 2
 
+   domain
+   mesh
+   field
+   pre-processor
+   mesh-adaptation
+   metric-field-calculator
+   mesh-deformation
+   overset-domain-assembly
+   fluid-solver
+   structural-solver
+   transfer-scheme
+   visualization
+   examples
+   FAQ
+   contact
+   about
+   proposals
