@@ -49,6 +49,7 @@ The mpi-path should be a folder that contains the `include` and `lib` folder for
    transfer-scheme
    visualization
    examples
+   FAQ
    contact
    proposals
    about
