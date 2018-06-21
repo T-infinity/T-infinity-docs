@@ -1,15 +1,36 @@
 .. image:: _static/images/t-inf-logo-black.png
-   :width: 128px
+   :width: 32px
    :align: center
    :alt: T-infinity logo
-T-infinity
-==========
-:math:`T^{\infty}` is an extensible framework for multiphysics applications.
 
-.. image:: _static/images/t-inf-blue-ring.png
-   :width: 500px
-   :align: center
-   :alt: T-infinity overview
+Getting Started
+===============
+
+First you must obtain a T-infinity distribution. 
+T-infinity is still under development and currently only available to beta testers.
+
+
+Installation
+------------
+
+Install T-infinity using the install.sh script. 
+
+```
+./install.sh --help 
+```
+
+
+Example Usage:
+```
+./install.sh --install-path=~/Desktop/ \
+             --mpi-path=/usr/local/mpich/ \
+             --c++-compiler=/usr/local/bin/g++ \
+             --c-compiler=/usr/local/bin/gcc \
+             --fortran-compiler=/usr/local/bin/gfortran \
+```
+
+The c, c++, and fortran compiler paths should point to the compiler executables.
+The mpi-path should be a folder that contains the `include` and `lib` folder for your mpi installation.
 
 
 .. toctree::
@@ -30,3 +51,4 @@ T-infinity
    examples
    contact
    proposals
+   about
