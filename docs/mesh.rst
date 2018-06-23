@@ -15,34 +15,34 @@ Mesh entities (nodes and cells) may be *resident* on more than one partition, ho
 by only one partition.  If a cell is resident on a partition, all nodes within that cell must
 also be resident on the partition.  Entities that are *resident* but not *owned* are typically referred to as *ghost* or *halo* entities.
 
-Node and Cell Ids
+Node and Cell IDs
 ~~~~~~~~~~~~~~~~~
 
-Each node has a local node identifier (Id) and a global node Id.  Likewise, each cell has a local cell Id and a global cell Id.
-Local Ids cannot be sparse.
-Local Ids begin at ``0`` and end ``total number of local entities - 1``.
-Local Ids are only used by the local partition, no other partition should know a local Id for any entity.
+Each node has a local node identifier (ID) and a global node ID.  Likewise, each cell has a local cell ID and a global cell ID.
+Local IDs cannot be sparse.
+Local IDs begin at ``0`` and end ``total number of local entities - 1``.
+Local IDs are only used by the local partition, no other partition should know a local ID for any entity.
 This allows a local partition to reorder entities (for cache efficiency, bandwidth reduction, or convienience) without communicating that reordering.
 
-Unlike local Ids, the global Id of an entity is unique across all partitions that entity is *resident*.
-The set of global Ids across all partitions cannot be sparse, they must begin at ``0`` and end at ``total number of entities - 1``.
-However, global Ids on a single partition will almost always be sparse.
+Unlike local IDs, the global ID of an entity is unique across all partitions that entity is *resident*.
+The set of global IDs across all partitions cannot be sparse, they must begin at ``0`` and end at ``total number of entities - 1``.
+However, global IDs on a single partition will almost always be sparse.
 
 .. note::
-   Local Ids are represented using a 32 bit integer, global ids are represented using a 64 bit integer.
+   Local IDs are represented using a 32 bit integer, global ids are represented using a 64 bit integer.
    Complex simulations may require more than 2.2 billion total mesh entities; however, it is considered unlikely that any one partition will have over 2.2 billion resident entities.
 
 Mesh Domains
 ~~~~~~~~~~~~
 :math:`T^{\infty}` supports multiple simultaneous mesh domains.  Multiple domains are required for overset simulations.
-Each domain is partitioned across all the ranks of a specific MPI communicator. Global Ids are only valid within a single domain.
+Each domain is partitioned across all the ranks of a specific MPI communicator. Global IDs are only valid within a single domain.
 There is no entity identifier valid across multiple domains.
 
 
 Conventions
 -----------
 Cells are accessed by calling ``void MeshInterface::cell(int cell_id, int* cell_ptr)``, the same call is used for both volume and surface cells.
-This call writes the local node Ids for the cell into the passed pointer by using the CGNS convention for node ordering.
+This call writes the local node IDs for the cell into the passed pointer by using the CGNS convention for node ordering.
 (See https://cgns.github.io/CGNS_docs_current/sids/conv.html).
 It is the caller's responsibility to ensure there is sufficient memory to fit all the nodes in the requested cell.
 The length of a cell is determined calling ``CellType MeshInterface::cellType(int cell_id)`` to get the cell's type.
